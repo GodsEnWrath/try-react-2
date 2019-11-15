@@ -29,7 +29,9 @@ export default class App extends Component {
     });
   };
 
-
+handleSubmit = employee => {
+  this.setState({employee: [...this.state.employee, employee]})
+}
 
 
 
@@ -37,8 +39,11 @@ export default class App extends Component {
     const { employee } = this.state;
 
     return (
-      <Table employeeData={employee} deleteEmployee={this.deleteEmployee} ></Table>
-   
+      <div>
+      <Table employeeData={employee} deleteEmployee={this.deleteEmployee}  ></Table>
+      <Form handleSubmit={this.handleSubmit}></Form>
+      </div>
     );
   }
 }
+

@@ -7,7 +7,7 @@ export default function TableBody(props) {
         <td>{row.name}</td>
         <td>{row.job}</td>
         <td><button onClick={() => props.deleteEmployee(index)} >Hapus</button></td>
-        <td><button onClick={() => props.tambahEmployee(index)}>Tambah</button></td>
+       
       </tr>
     );
   });

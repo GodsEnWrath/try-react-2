@@ -16,7 +16,14 @@ export default class Form extends Component {
         this.setState({
             [name]: value
         })
+
+        console.log(this.state)
     }
+
+submitForm = () => {
+    this.props.handleSubmit(this.state)
+    this.setState(this.initialState)
+}
 
     render() {
         const {name, job}= this.state
@@ -28,6 +35,7 @@ export default class Form extends Component {
                 <input type="text" name="name" value={name} onChange={this.handleChange} ></input>
                 <label>Job</label>
                 <input type="text" name="job" value={job} onChange={this.handleChange}></input>
+                <input type="button" value="Tambah" onClick={this.submitForm}></input>
                 </form> 
             </div>
         )

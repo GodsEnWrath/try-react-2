@@ -4,11 +4,11 @@ import TableBody from "./TableBody";
 
 export default class Table extends Component {
   render() {
-    const { employeeData, deleteEmployee, tambahEmployee} = this.props;
+    const { employeeData, deleteEmployee} = this.props;
     return (
       <table>
         <TableHead></TableHead>
-        <TableBody employeeData= {employeeData} deleteEmployee={deleteEmployee} tambahEmployee={tambahEmployee}></TableBody>
+        <TableBody employeeData= {employeeData} deleteEmployee={deleteEmployee}></TableBody>
       </table>
     );
   }
